@@ -1,0 +1,22 @@
+from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import permissions
+
+# Create your views here.
+class FibView(APIView):
+    permission_classes = (permissions.AllowAny,)
+
+    def post(self, request):
+        print(request)
+        print(request.POST)
+        decoded = request.body.decode('utf-8')
+        body = json.loads(decoded)
+        return Response(data={ 'echo': 'hello world' }, status=200)
+
+class LogView(APIView):
+    permission_classes = (permissions.AllowAny,)
+
+    def get(self, request):
+        return Response(data={ 'echo': 'hello world' }, status=200)
+
