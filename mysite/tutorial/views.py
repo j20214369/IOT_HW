@@ -8,7 +8,7 @@ import json
 import os
 import os.path as osp
 import sys
-BUILD_DIR = osp.join(osp.dirname(osp.abspath(__file__)), "../../gRPC-with-protobuf/build/service/")
+BUILD_DIR = osp.join(osp.dirname(osp.abspath(__file__)), "../../gRPC/build/service/")
 sys.path.insert(0, BUILD_DIR)
 
 import grpc

@@ -51,4 +51,11 @@ if __name__ == "__main__":
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     servicer = FibCalculatorServicer()
     fib_pb2_grpc.add_FibCalculatorServicer_to_server(servicer, server)
+    try:
+        server.add_insecure_port(f"{args['ip']}:{args['port']}")
+        server.start()
+        print(f"Run gRPC Server at {args['ip']}:{args['port']}")
+        server.wait_for_termination()
+    except KeyboardInterrupt:
+        pass
 
