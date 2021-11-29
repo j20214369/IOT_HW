@@ -33,9 +33,10 @@ $ python3 manage.py runserver 0.0.0.0:8000
 ```
 
 ## How to perform client request
+Open a new terminal
 - to see your history
 ```bash
-$ curl http://localhost:8000/rest/fibonacci
+$ curl http://localhost:8000/rest/logs
 ```
 - to see the N fibonacci
 ```bash
