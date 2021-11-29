@@ -33,11 +33,11 @@ $ python3 manage.py runserver 0.0.0.0:8000
 ```
 
 ## How to perform client request
-- to see the N fibonacci
+- to see your history
 ```bash
 $ curl http://localhost:8000/rest/fibonacci
 ```
-- to see your history
+- to see the N fibonacci
 ```bash
 $ curl -X POST http://localhost:8000/rest/fibonacci -d '{"order":N}'
 ```
