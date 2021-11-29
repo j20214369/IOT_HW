@@ -1,5 +1,5 @@
 # IOT_HW
-##Environment
+## Environment
 ```
 Docker version 20.10.7
 Python 3.6.9
@@ -32,7 +32,7 @@ $ python3 manage.py migrate
 $ python3 manage.py runserver 0.0.0.0:8000
 ```
 
-Perform client request
+## How to perform client request
 - to see the N fibonacci
 ```bash
 $ curl http://localhost:8000/rest/fibonacci
